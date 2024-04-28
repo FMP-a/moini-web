@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta itemprop="name" content="Moini Rimboo"/>
+<meta name="description" content="Moini Rimboos offizielle Website.">
+<meta name="keywords" content="Crazymine, Minecraft, Moini, Rimboo, Moini Rimboo, moini29fan, moini29istcool, moini29istderbeste, TikTok, Tik Tok, YouTube, Discord, Team, Team-Mitglieder, Discord Bot, Discord Bots, Moini Bot, Moini Giveaways, Moini Global, Moini Global Chat, Moini Logs, Moini Tickets, Moini xd Counter, Partner, Discord-Partner" />
+    <title>Moini Rimboo</title>
+    <!-- Favicon hinzufügen -->
+    <link rel="icon" type="image/png" href="moini.png">
+    <style>
+        /* Globale Stildefinitionen */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Stil für das Burger-Menü */
+        .menu {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Startposition außerhalb des sichtbaren Bereichs */
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            overflow-y: scroll;
+            transition: left 0.3s;
+        }
+
+        .burger {
+            display: inline-block;
+            cursor: pointer;
+            font-size: 30px; /* Größe des Burger-Menü-Buttons */
+            margin-left: 10px; /* Verschiebung nach rechts */
+        }
+
+        /* Stil für die Navigation */
+        .navigation {
+            list-style: none;
+            padding: 0;
+        }
+
+        .navigation li {
+            padding: 10px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Stil für den Seiteninhalt */
+        #content {
+            padding: 20px;
+            transition: margin-left 0.3s;
+        }
+
+        /* Stil für den Discord-Server-Button */
+        .discord-button {
+            display: inline-block;
+            padding: 25px 55px;
+            background-color: #5865f2; /* Ändern Sie die Hintergrundfarbe auf #5865f2 */
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+            /* Fügen Sie das Discord-Logo hinzu */
+            background-image: url('discord.jpg');
+            background-repeat: no-repeat;
+            background-size: 60px; /* Größe des Logos */
+            background-position: 15px 50%; /* Position des Logos links vom Text */
+            padding-left: 70px; /* Platz für das Logo */
+        }
+
+        /* Stil für die Updates-Informationen */
+        .updates {
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 36px; /* Größere Schrift für "Updates:" */
+            margin-left: 30px;
+        }
+
+        /* Stil für die Update-Liste */
+        .update-list {
+            list-style-type: disc; /* Anzeige der Aufzählungszeichen */
+            margin-top: 10px;
+            font-size: 22px; /* Kleinere Schrift für die Updates */
+            text-decoration: none; /* Entfernen der Unterstreichung */
+            font-weight: normal; /* Kein Fettdruck */
+        }
+
+        /* Stil für den Schiebeschalter */
+        .switch {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+            user-select: none;
+        }
+
+        .switch input {
+            display: none;
+        }
+
+        .slider {
+            width: 50px;
+            height: 24px;
+            position: relative;
+            background-color: #ccc;
+            border-radius: 34px;
+            margin: 0 10px;
+            top: -10px;
+            left: 10px;
+        }
+
+        .slider:before {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: white;
+            border-radius: 50%;
+            left: 4px;
+            top: 4px;
+            transition: 0.4s;
+        }
+
+        .switch input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        .switch input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        /* Dunkles Design bei aktiviertem Schiebeschalter */
+        .dark-mode {
+            background-color: #343839;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="burger" onclick="toggleMenu()">☰</div>
+    <div class="menu" id="menu">
+        <ul class="navigation">
+            <li><a href="/">Startseite</a></li>
+            <li><a href="/partner">Unsere Partner</a></li>
+            <li><a href="/unsere-bots">Unsere Bots</a></li>
+            <li><a href="/social-media">Social Media</a></li>
+            <li><a href="/team-mitglieder">Team Mitglieder</a></li>
+<li><a href="/crazymine">Crazymine</a></li>
+    <li><a href="/login">Login</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <h1>Willkommen auf der Website von Moini Rimboo</h1>
+        <!-- Fügen Sie den Discord-Server-Button hinzu -->
+        <a href="https://discord.com/invite/kMmtYGN3H7" class="discord-button">Discord Server</a>
+    </div>
+
+    <!-- Updates-Informationen -->
+    <div class="updates">
+        <p>Updates:</p>
+        <ul class="update-list">
+            <li>Neuer Partner: FlyFun Community</li>
+        </ul>
+    </div>
+    </div>
+
+    <div class="switch">
+        <label class="switch">
+            <input type="checkbox" id="colorSwitch">
+            <div class="slider round"></div>
+        </label>
+    </div>
+
+<!-- Änderungen am Skript für Speicherung des Modus im Local Storage -->
+<script>
+    // Funktion zum Speichern des Modus im Local Storage
+    function saveModeToLocalStorage(isDarkMode) {
+        localStorage.setItem("darkMode", isDarkMode ? "true" : "false");
+    }
+
+    // Funktion zum Laden des Modus aus dem Local Storage
+    function loadModeFromLocalStorage() {
+        var darkMode = localStorage.getItem("darkMode") === "true";
+        return darkMode;
+    }
+
+    // Stellen Sie sicher, dass das Menü zu Beginn außerhalb des sichtbaren Bereichs ist
+    document.getElementById('menu').style.left = '-250px';
+
+    function toggleMenu() {
+        var menu = document.getElementById('menu');
+        if (menu.style.left === '0px' || menu.style.left === '') {
+            menu.style.left = '-250px';
+        } else {
+            menu.style.left = '0px';
+        }
+    }
+
+    // Schließen Sie das Menü, wenn außerhalb des Menüs geklickt wird
+    document.addEventListener('click', function(event) {
+        var menu = document.getElementById('menu');
+        var burger = document.querySelector('.burger');
+        if (menu.style.left === '0px' && event.target !== menu && event.target !== burger) {
+            menu.style.left = '-250px';
+        }
+    });
+
+    // Verhindern Sie das Schließen des Menüs, wenn im Menü geklickt wird
+    document.querySelector('.menu').addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
+
+    // JavaScript für den Farbwechsel
+    var colorSwitch = document.getElementById('colorSwitch');
+    var body = document.body;
+
+    // Laden des Modus aus dem Local Storage
+    var isDarkMode = loadModeFromLocalStorage();
+
+    // Setzen des Schiebeschalters basierend auf dem geladenen Modus
+    colorSwitch.checked = isDarkMode;
+
+    // Anwenden des Modus auf den Body
+    if (isDarkMode) {
+        body.classList.add('dark-mode');
+    } else {
+        body.classList.remove('dark-mode');
+    }
+
+    colorSwitch.addEventListener('change', function() {
+        if (colorSwitch.checked) {
+            body.classList.add('dark-mode');
+        } else {
+            body.classList.remove('dark-mode');
+        }
+        // Speichern des Modus im Local Storage
+        saveModeToLocalStorage(colorSwitch.checked);
+    });
+</script>
